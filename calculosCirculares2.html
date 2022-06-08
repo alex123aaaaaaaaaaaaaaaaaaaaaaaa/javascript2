@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculos circulares en JS - versión 2.0</title>
+    <style>
+       #resultados {visibility:hidden;}
+       #radio {margin: 2em;}
+    </style>
+</head>
+<body>
+    <h1>Javascript para realizar cálculos a partir de un radio</h1>
+    <form action="">
+        <label for="">Dame el radio:</label><!-- etiqueta informativa-->
+        <input type="text" id="radio"><!-- dato de entrada -->
+    </form>
+    <button onclick="calculosRadio()">Calcula!</button>
+    <ul id="resultados">
+        <li id="circunfe"></li>
+        <li id="circulo"></li>
+        <li id="esfera"></li>
+    </ul>
+    <img src="./circulo-radio.png" alt="españa">
+    <script>
+        function calculosRadio(){
+            /* algoritmo secuencial para calcular:
+                - la longitud de la circunferencia
+                - el área del círculo
+                - el volumen de la esfera
+               versión: 2.0 
+
+               CON FORMULARIO DE ENTRADA
+               
+            */
+
+            /* entrada de datos */
+            // let radio=Number(prompt("Dame un radio en centímetros:"));
+            let radio=Number(document.getElementById("radio").value);
+            const PI=3.1416;
+
+            /* cálculos interno */
+            let circunferencia=2*radio*PI;
+            let circulo=radio**2*PI;
+            let esfera=(4*radio**3*PI)/3;
+
+            /* mostrar resultado */
+            document.getElementById("resultados").style.visibility="visible";
+            document.getElementById("circunfe").innerHTML=
+            "La circunferencia es:"+circunferencia+"cm";
+            document.getElementById("circulo").innerHTML=
+            "El círculo es:"+circulo+"cm cuadrados";
+            document.getElementById("esfera").innerHTML=
+            "La esfera es:"+esfera+"cm cúbicos";
+        }
+    </script>
+</body>
+</html>

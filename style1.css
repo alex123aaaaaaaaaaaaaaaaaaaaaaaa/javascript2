@@ -1,0 +1,14 @@
+body{background-color: aquamarine;}
+body h1 {font-family: monospace;
+        font-size: 0.5cm;
+        text-align: center;
+        padding-top: 3em;
+        font-style: inherit;}
+body form {text-align:center;
+            padding-top: 2em;
+        font-size: medium;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: inherit;}
+body button {background-color: white;}
+img {width: 20%;
+    float: right;}
